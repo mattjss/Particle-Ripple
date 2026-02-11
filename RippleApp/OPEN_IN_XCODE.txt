@@ -1,0 +1,9 @@
+TO OPEN IN XCODE:
+
+1. Open Finder
+2. Go to this folder: Particle Ripple
+3. Open the folder: RippleApp
+4. Double-click: RippleApp.xcodeproj
+
+That will open the project in Xcode.
+Then press ⌘R to build and run.
