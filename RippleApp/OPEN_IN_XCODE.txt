@@ -1,9 +1,9 @@
-TO OPEN IN XCODE:
+USE THIS PROJECT TO RUN THE APP
+================================
 
-1. Open Finder
-2. Go to this folder: Particle Ripple
-3. Open the folder: RippleApp
-4. Double-click: RippleApp.xcodeproj
+1. Open Finder and go to: Particle Ripple → RippleApp
+2. Double-click: RippleApp.xcodeproj
+3. In Xcode, pick a simulator (e.g. iPhone 16) at the top
+4. Press ⌘R to build and run
 
-That will open the project in Xcode.
-Then press ⌘R to build and run.
+When the app opens: drag or tap on the black screen to create ripples in the dot grid.

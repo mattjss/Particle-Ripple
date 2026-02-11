@@ -96,17 +96,21 @@ struct MultipleRipplesModifier: ViewModifier {
     let duration: TimeInterval
 
     func body(content: Content) -> some View {
-        ripples.reduce(content) { view, ripple in
-            view.modifier(RippleEffectModifier(
-                at: ripple.origin,
-                trigger: ripple.trigger,
-                amplitude: amplitude,
-                frequency: frequency,
-                decay: decay,
-                speed: speed,
-                duration: duration
-            ))
+        var result = AnyView(content)
+        for ripple in ripples {
+            result = AnyView(
+                result.modifier(RippleEffectModifier(
+                    at: ripple.origin,
+                    trigger: ripple.trigger,
+                    amplitude: amplitude,
+                    frequency: frequency,
+                    decay: decay,
+                    speed: speed,
+                    duration: duration
+                ))
+            )
         }
+        return result
     }
 }
 

@@ -100,15 +100,15 @@ struct RippleView: View {
     private func startAnimation() {
         Timer.scheduledTimer(withTimeInterval: 1.0/60.0, repeats: true) { _ in
             let deltaTime: Float = 1.0 / 60.0
-            
-            for i in ripples.indices {
-                ripples[i].time += deltaTime
+            DispatchQueue.main.async {
+                var updated = ripples
+                for i in updated.indices {
+                    updated[i].time += deltaTime
+                }
+                updated.removeAll { $0.time > 1.5 }
+                ripples = updated
+                currentTime = Date()
             }
-            
-            // Remove old ripples
-            ripples.removeAll { $0.time > 1.5 }
-            
-            currentTime = Date()
         }
     }
 }
