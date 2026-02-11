@@ -1,4 +1,6 @@
-# Particle Ripple
+# Particle-Ripple
+
+Experimenting with particle ripple effects.
 
 An interactive, GPU-accelerated ripple effect for SwiftUI using Metal shaders. Tap or touch any view to create water-like ripples that propagate outward with configurable wave physics.
 
